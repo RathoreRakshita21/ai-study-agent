@@ -1,0 +1,14 @@
+# Secrets — never upload these
+.env
+www.youtube.com_cookies.txt
+
+# Virtual environment
+.venv/
+
+# Downloaded/generated files
+downloades/
+vector_db/
+
+# Python cache
+__pycache__/
+*.pyc
