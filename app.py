@@ -298,7 +298,7 @@ def run_pipeline_with_progress(source: str, language: str, placeholder) -> dict:
 # Sidebar — the slate
 # ---------------------------------------------------------------------------
 with st.sidebar:
-    st.title("📚 AI Study Assistant")
+    st.title("📚 AI Study Agent")
     st.caption("Turn a lecture or video into a title, summary, key points, and a chat you can quiz yourself with.")
 
     source = st.text_input(
