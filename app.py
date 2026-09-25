@@ -13,7 +13,7 @@ from core.rag_engine import build_rag_chain, ask_question
 
 load_dotenv()
 
-st.set_page_config(page_title="AI Study Assistant", page_icon="📚", layout="wide")
+st.set_page_config(page_title="AI Study Agent", page_icon="📚", layout="wide")
 
 # ---------------------------------------------------------------------------
 # Design tokens & global styling
@@ -429,8 +429,8 @@ elif st.session_state.result is not None:
             with st.chat_message("user"):
                 st.markdown(question)
 
-            with st.chat_message("assistant"):
+            with st.chat_message("agent"):
                 with st.spinner("Checking the transcript..."):
                     answer = ask_question(result["rag_chain"], question)
                 st.markdown(answer)
-            st.session_state.chat_history.append(("assistant", answer))
+            st.session_state.chat_history.append(("agent", answer))
